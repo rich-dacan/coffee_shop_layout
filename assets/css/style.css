@@ -1,0 +1,374 @@
+/*
+Theme Name: Get.coffee
+Theme URI: https://get.coffee.com.br/
+Author: Kenzie Academy 
+Author URI: https://kenzie.com.br/
+Description: Descrção do thema.
+Version: 1.0
+Text Domain: https://kenzie.com.br/
+
+--------------------------------------------
+ESTRUTURAÇÃO BASE
+--------------------------------------------
+**** DECLARAÇÃO DE VARIÁVEIS
+**** ESTILOS GERAIS
+**** BODY
+**** HEADER
+**** FOOTER
+**** PÁGINA INICIAL
+**** EXTRAS
+**** @MEDIA
+​Activity - Get Coffee Layout
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito', sans-serif;
+*/
+
+/* FONTS​ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');/* FONTS​ */
+
+/* VARIÁVEIS */
+:root{
+    --larguraContainerConteudo:1140px;
+    --coresTexto: #242424 
+    --coresSecundaria: #FCA60F
+    --fontSizePrimaria: 18px
+    --fontSizeSecundaria: 36px
+}
+/* VARIÁVEIS */
+  
+  
+/* GERAL */
+html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, a{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+/* GERAL */
+  
+/* HTML */
+html{}
+/* HTML */
+  
+/* BODY */
+body{
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+}
+/* BODY */
+  
+
+/* HEADER */
+header{
+    /* border-bottom: 2px solid; */
+    box-shadow: 0px 1px 8px rgba(36, 36, 36, 0.15);
+    position: sticky;
+    top: 0;
+}
+
+figcaption {
+    display: none;
+}
+
+.container-flex {
+    padding: 10px;
+}
+
+.page_header_logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+    .page_header_menu ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .page_header_menu li {
+        display: block;
+        margin: 0 10px;
+    }
+    .page_header_menu li:hover{
+        background-color: #FCA60F;
+        border-radius: 5px;
+        transition: all ease 0.5s;
+
+    }
+    .page_header_menu a {
+        display: block;
+        color: #000000;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .page_header_menu a:hover{
+        color: #fff;
+        /* font-weight: bold; */
+    }
+
+/* HEADER */
+  
+
+/* FOOTER */
+footer{}
+/* FOOTER */
+
+  
+/* INICIAL */
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.large-container, .left{
+    background-image: url(/assets/img/Vector-left.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: 130px;
+    background-size: 70vw;
+    background-position-x: -120px;
+
+}
+.page_home_contant, .right {
+    background-image: url(/assets/img/Vector-right.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: 70vw;
+    background-position-x: 230px;
+    background-position-y: 380px;
+}
+
+.container h2 {
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+    width: 270px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.page_home_contant_copo, .scrollDown {
+    display: none;
+
+}
+.page_home_list_social {
+    display: flex;
+    justify-content: center;
+
+    padding: 20px;
+    margin-top: 200px;
+}
+    .page_home_list_social li {
+    margin-left: 10px;
+    margin-bottom: 50px;
+    }
+
+button {
+    /* padding: 20px; */
+    width: 60vw;
+    height: 45px;
+    margin: 50px auto;
+    display: block;
+
+    background-color: #FCA60F;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+button > a{
+    color: #fff;
+}
+
+main>a{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    text-align: center;
+    max-width: 110px;
+    margin: 0 auto;
+    position: relative;
+}
+    main>a::before{
+        content: "";
+        display: block;
+        width: 4px;
+        height: 7px;
+        background: #FFFFFF;
+        border-radius: 50px;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 3px;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+    }
+    main>a::after{
+        content: "";
+        display: block;
+        width: 20px;
+        height: 35px;
+        background: #FCA60F;
+        border-radius: 50px;
+        margin: 9px auto 0;
+
+    }
+
+/* INICIAL */
+  
+
+/* EXTRAS */
+
+/* para estilizar a scrollbar */
+::-webkit-scrollbar{}
+::-webkit-scrollbar-button{}
+::-webkit-scrollbar-track{}
+::-webkit-scrollbar-track-piece{}
+::-webkit-scrollbar-thumb{}
+::-webkit-scrollbar-corner{}
+::-webkit-resizer{}
+/* EXTRAS */
+  
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 450px){
+    .large-container, .left{
+        background-image: url(/assets/img/Vector-left.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position-y: 150px;
+        background-size: 60vw;
+        background-position-x: -120px;
+    
+    }
+    .page_home_contant, .right {
+        background-image: url(/assets/img/Vector-right.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-size: 60vw;
+        background-position-x: 350px;
+        background-position-y: 380px;
+    }
+}
+
+@media screen and (min-width: 800px){
+    .page_header_logo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+
+        padding-left: 150px;
+    }
+        .page_header_menu ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            
+            
+
+            padding-right: 150px;
+        }
+    
+    .scrollDown {
+        display: block;
+    }
+    .page_home_contant_copo{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+        .page_home_contant_copo img{
+            height: 220px;
+            position: fixed;
+            margin-top: 100px;
+            padding-right: 200px;
+        }
+    .block-left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .block-left h2{
+        width: 300px;
+        font-size: 20px;
+        line-height: 30px;
+        margin-left: 170px;
+        text-align: left;
+    }
+    button {
+        width: 200px;
+        height: 45px;
+        margin-left: 170px;
+        display: block;
+    
+        
+        background-color: #FCA60F;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        
+    }
+        button > a{
+            color: #fff;
+        }
+    .page_home_list_social {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    
+        padding: 20px;
+        margin-top: -50px;
+        margin-left: 150px;
+    }
+
+    .large-container, .left{
+        background-image: url(/assets/img/Vector-left.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position-y: 150px;
+        background-size: 350px;
+        background-position-x: -120px;
+    
+    }
+    .page_home_contant, .right {
+        background-image: url(/assets/img/Vector-right.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-size: 300px;
+        background-position-x: 850px;
+        background-position-y: 150px;
+    }
+
+
+
+    @media screen and (min-width: 1330px){
+        .page_home_contant, .right {
+            background-image: url(/assets/img/Vector-right.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-size: 300px;
+            background-position-x: 1150px;
+            background-position-y: 150px;
+        }
+
+    }
+/* MEDIA QUERIES */
